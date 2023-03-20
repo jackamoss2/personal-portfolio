@@ -37,6 +37,13 @@ img {
     display:block;
 }
 
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
 a:link{
     text-decoration: none!important;
   }
@@ -48,11 +55,11 @@ a:link{
     padding-bottom:1em;
     transition: 0.3s;
     border-radius: 8px;
-    text-decoration: none;!important
+    text-decoration: none!important;
 }
 
 .nav-item:hover {
-    background-color: white;
+    background-color: #222;
     transition: 0.3s;
 }
 
@@ -61,16 +68,19 @@ a:link{
 }
 
 .section {
-    background-color: white;
-    border-bottom: 1px solid rgb(189, 189, 189);
-    border-top: 1px solid rgb(189, 189, 189);
+    border-bottom: 1px solid #30363d;
+    border-top: 1px solid #30363d;
     margin-top:16px;
 }
 
 .section-title {
-    background-color:#219472;
+    /* background-color:#343a40; */
+    background-color: rgba(13,17,23, 0.7);
+    backdrop-filter: blur(6px);
     padding: 1em;
+    width:100%;
     height:38px;
+    border-bottom: 1px solid #30363d;
 }
 
 .section-title h1 {
@@ -80,9 +90,12 @@ a:link{
 }
 
 .section-body {
-    margin:1em 2em 1em 2em;
+    background-color: #0d1117;
+    /* margin:1em 2em 1em 2em; */
     padding-top:2em;
     padding-bottom:2em;
+    color:#8b949e;
+    border-radius: 0px 0px 7px 7px;
 }
 
 .section-body h3,p {
@@ -92,7 +105,7 @@ a:link{
 .body-card {
     /* box-shadow: 0px 0px 5px rgb(121, 121, 121); */
     margin-bottom: 2em;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
 }
 
 .body-card-contents {
@@ -108,8 +121,10 @@ a:link{
 }
 
 .project-card {
-    box-shadow: 0px 0px 5px rgb(121, 121, 121);
-    max-width: 700px;
+    /* box-shadow: 0px 0px 5px rgb(121, 121, 121); */
+    border-radius: 7px;
+    border: 1px solid #30363d;
+    max-width: 400px;
     /* margin:16px; */
     margin:auto;
     margin-top:16px;
@@ -122,7 +137,7 @@ a:link{
     /* margin-bottom:12px; */
     margin-left:20px;
     margin-right:20px;
-    color:black;
+    color:#219472;
 }
 
 .project-title img {
@@ -140,6 +155,7 @@ a:link{
     margin:0;
     padding: 0;
     line-height: 1;
+    border-radius: 0 0 7px 7px;
 }
 
 /* .project-card {
@@ -199,8 +215,8 @@ a:link{
     padding-left:.5em;
 }
 
-.filter-navy {
-    filter: invert(10%) sepia(32%) saturate(1870%) hue-rotate(190deg) brightness(96%) contrast(94%);
+.filter-green {
+    filter: invert(43%) sepia(72%) saturate(430%) hue-rotate(111deg) brightness(94%) contrast(89%);
 }
 
 .ed-card {
@@ -231,14 +247,15 @@ a:link{
     padding-top: 24px;
     padding-bottom: 24px;
     padding-right:40px;
-    border-bottom: 1px solid;
-    border-color: rgb(189, 189, 189);
+    /* border-bottom: 1px solid; */
+    /* border-color: rgb(189, 189, 189); */
 }
 
 #nav-header-desktop * {
+    width:700;
     font-weight:400;
     text-decoration: none;
-    color: #000000;
+    color: #f8f9fa;
     padding-left:24px;
     margin:8px;
 }
@@ -250,6 +267,7 @@ a:link{
 #nav-links-wrapper {
     margin-top:12px;
     display:none;
+    /* background-color: #343a40; */
 }
 
 #nav-links {
@@ -258,16 +276,21 @@ a:link{
     font-family: 'Roboto', sans-serif;
 }
 
+#nav-links * {
+    color:white;
+    font-weight: 200;
+}
+
 #nav-links-mobile {
     background-color: white;
-    box-shadow: 0 5px 5px 0 rgb(82, 82, 82);
+    /* box-shadow: 0 5px 5px 0 rgb(82, 82, 82); */
     display: flex;
     justify-content: space-around;
-    background-color: #e5e5e5;
+    background-color: black;
 }
 
 #nav-links-mobile * {
-    color:black;
+    color:#fafbfc;
     margin: 0;
     padding: 12px;
     text-decoration: none;
@@ -290,7 +313,7 @@ a:link{
 }
 
 #header-mobile {
-    background-color: #e5e5e5;
+    background-color: black;
     height: 82px;
     width:100%;
     /* position: fixed; */
@@ -303,7 +326,7 @@ a:link{
     margin-bottom: 0;
     font-family: 'Roboto', sans-serif;
     font-weight:400;
-    color: #000000;
+    color: #fafbfc;
 }
 
 #header-mobile h3 {
@@ -330,7 +353,7 @@ a:link{
 }
 
 #main-img-space {
-    padding-top: 70%;
+    padding-top: 500px;
 }
 
 #main-img {
@@ -344,16 +367,9 @@ a:link{
     padding-right: 64px;
 }
 
-#recipe-img {
-    /* margin:24px; */
-    /* box-sizing: content-box; */
-    width:80%;
-    margin:auto;
-}
-
 #education-section div {
     margin:20px;
-    margin-bottom:48px;
+    /* margin-bottom:48px; */
 }
 
 #education-section div * {
@@ -361,7 +377,7 @@ a:link{
 }
 
 #education-section h1 {
-    color: #000000;
+    color: #219472;
 }
 
 #projects-gallery {
@@ -395,6 +411,7 @@ a:link{
     flex-direction: column;
     align-items: center;
     margin-bottom: 4em;
+    background-color: red;
 }
 
 svg {
@@ -471,14 +488,15 @@ svg {
 @media (min-width: 810px) {
     .section {
         margin:12px;
-        border-radius: 8px;
-        border: 1px solid rgb(189, 189, 189);
+        border-radius: 7px;
+        border: 1px solid #30363d;
 
     }
 
     .section-title {
         min-width:400px;
-        border-radius: 7px 0px 0px 0px;
+        border-radius: 7px 7px 0px 0px;
+        color: #fafbfc;
     }
     
     .section-title-style {
@@ -487,22 +505,6 @@ svg {
         height: 70px;
     }
     
-    .cornered-section-title {
-        /* position: absolute; */
-        height: 0;
-        border-style: solid;
-        padding-top:10px;
-        border-width: 0 0 60px 60px;
-        border-color: transparent transparent transparent #219472;
-    }
-    
-    .line-section-title {
-        /* position: absolute; */
-        width:100%;
-        height:10px;
-        background-color:#219472;
-        border-radius: 0px 7px 0px 0px;
-    }
 
     #mobile-nav-resume {
         display: block;
@@ -523,10 +525,12 @@ svg {
         justify-content: space-between;
     }
 
-
-    #projects-section-title {
-        width:600px;
+    #projects-gallery {
+        flex-direction: row;
+        padding:32px;
+        justify-content: space-around;
     }
+    
 }
 
 /* transition to side nav always visible */
@@ -571,7 +575,11 @@ svg {
     #nav-links-wrapper {
         display:block;
     }
-    
+
+    #main-img-space {
+        padding-top:650px;
+    }
+
 }
 
 @media (min-width: 1400px) {
@@ -600,12 +608,6 @@ svg {
     /* #body-container {
         margin:auto;
     } */
-    
-    #projects-gallery {
-        flex-direction: row;
-        padding:32px;
-        justify-content: space-around;
-    }
 }
 
 @media (min-width: 1600px) {

@@ -9,6 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="main.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.138.0/build/three.module.js",
+                "OrbitControls": "https://unpkg.com/three@0.138.0/examples/jsm/controls/OrbitControls.js"
+            }
+        }
+    </script>
 </head>
 <body>
     <div id="body-container">
@@ -48,7 +56,7 @@
         </div>
         <div id="main">
             <div id="main-img-wrapper">
-                <img src="images/main-img.jpg" id="main-img">
+                <canvas id="bg"></canvas>    
                 <div id="main-img-space"></div>
             </div>
             <div id="about-div" class="section">
@@ -56,8 +64,6 @@
                     <div class="section-title">
                         <h1>ABOUT</h1>
                     </div>
-                    <div class="cornered-section-title"></div>
-                    <div class="line-section-title"></div>
                 </div>
                 <div class="section-body" id="about-text">
                     <p>
@@ -65,20 +71,12 @@
                     </p>
                     <br>
                     <p>
-                        I've been coding for the better part of one year. Previously, I worked as a junior civil design engineer for three years. That experience imparted in me a passion for team-based design, and an enthusiasm for impactful technology. I'm truly excited for my next phase of applying tech to bring meaning and value to projects of all sorts.
+                        I've been coding for the better part of one year. Previously, I worked as a junior civil design engineer for three years. That experience imparted in me a passion for team-based design, clear communication of complicated data, and an enthusiasm for impactful technology. I'm truly excited for my next phase of applying tech to bring meaning and value to projects of all sorts.
                     </p>
-
-
-
-<!-- Hi, I'm Man Parvesh Singh Randhawa and I'm a Software Engineer at the world-renowned tech giant, Yahoo.
-I have been working in the tech industry for over five years now, and have been involved in many different projects during that time.
-This website is my personal portfolio and blog, where I share my insights and experiences in the tech world, as well as my thoughts on
-various topics. I'm always looking to learn more, and I'm excited to share the knowledge I've gained with the world.
-
-In my current role, I'm working on the backend of Yahoo Fantasy Sports.
-It's a stimulating and demanding job that has enabled me to expand my knowledge and skills within the tech industry.
-I'm constantly challenged to come up with creative solutions to complex problems, and I'm able to apply the latest technologies
-to Yahoo's products. It's an immensely rewarding experience, and I'm thankful for the opportunity to be part of the Yahoo team. -->
+                    <br>
+                    <p>
+                        I like hiking, camping, climbing, and playing with my cats, guitars, and videogames.
+                    </p>
                 </div>
             </div>
             <div id="projects-div" class="section">
@@ -86,8 +84,6 @@ to Yahoo's products. It's an immensely rewarding experience, and I'm thankful fo
                     <div id="projects-section-title" class="section-title">
                         <h1>PERSONAL PROJECTS</h1>
                     </div>
-                    <div class="cornered-section-title"></div>
-                    <div class="line-section-title"></div>
                 </div>
                 <div id="projects-gallery" class="section-body">
                     <div class="body-card">
@@ -95,7 +91,7 @@ to Yahoo's products. It's an immensely rewarding experience, and I'm thankful fo
                             <div class="project-info">
                                 <a href="https://geografish.herokuapp.com/" class="project-title" target="_blank">
                                     <h2>GeograFish</h2>
-                                    <img src="images/arrow-right-to-bracket-solid.svg" alt="go to app icon">
+                                    <img src="images/arrow-right-to-bracket-solid.svg" alt="go to app icon" class="filter-green" >
                                 </a>
                                 <p>A web app allowing users to make accounts, upload GIS data, view attributes, style data objects, and share maps via unique URL or user profile.</p>
                                 <br>
@@ -125,8 +121,6 @@ to Yahoo's products. It's an immensely rewarding experience, and I'm thankful fo
                     <div class="section-title">
                         <h1>EDUCATION</h1>
                     </div>
-                    <div class="cornered-section-title"></div>
-                    <div class="line-section-title"></div>
                 </div>
                 <div id="education-section" class="section-body">
                     <div class="ed-card">
@@ -177,26 +171,24 @@ to Yahoo's products. It's an immensely rewarding experience, and I'm thankful fo
                     <div class="section-title">
                         <h1>CONTACT</h1>
                     </div>
-                    <div class="cornered-section-title"></div>
-                    <div class="line-section-title"></div>
                 </div>
                 <div id="contact-section-wrapper" class="section-body">
                     <div id="contact-section">
                         <a href="https://www.linkedin.com/in/jackamoss/" target="_blank" class="content-slip">
                             <div class="contact-icon">
-                                <img src="./images/linkedin.svg" class="filter-navy" alt="LinkedIn Icon">
+                                <img src="./images/linkedin.svg" class="filter-green" alt="LinkedIn Icon">
                             </div>
                             <p>linkedin.com/in/jackamoss</p> 
                         </a>
                         <a href="https://github.com/jackamoss2" target="_blank" class="content-slip">
                             <div class="contact-icon">
-                                <img src="./images/github.svg" class="filter-navy" alt="Github Icon">
+                                <img src="./images/github.svg" class="filter-green" alt="Github Icon">
                             </div>
                             <p>github.com/jackamoss2</p> 
                         </a>
                         <a href="mailto:jack@jackamoss.com" class="content-slip">
                             <div class="contact-icon">
-                                <img src="./images/envelope-solid.svg" class="filter-navy" alt="Email Icon">
+                                <img src="./images/envelope-solid.svg" class="filter-green" alt="Email Icon">
                             </div>
                             <p>jack@jackamoss.com</p>
                         </a>
@@ -208,23 +200,14 @@ to Yahoo's products. It's an immensely rewarding experience, and I'm thankful fo
                     <div class="section-title">
                         <h1>RESUME</h1>
                     </div>
-                    <div class="cornered-section-title"></div>
-                    <div class="line-section-title"></div>
                 </div>
-                <div id="resume-link">
-                    <a href="https://docs.google.com/document/d/1_aQCjujcLprWIJLyJdhcOSJdh945GoIEyw8YfOpZLd8/edit?usp=sharing" target="_blank">
-                        <!-- <img src="images/arrow-right-to-bracket-solid.svg" id="resume-go-icon"> -->
-                        <img src="images/resume.png" id="resume-img">
-                    </a>
+                <div class="section-body">
+                    <div id="resume-link" class="section-body">
+                        <a href="https://docs.google.com/document/d/1_aQCjujcLprWIJLyJdhcOSJdh945GoIEyw8YfOpZLd8/edit?usp=sharing" target="_blank">
+                            <img src="images/resume.png" id="resume-img">
+                        </a>
+                    </div>
                 </div>
-                <!-- <div id="resume-section" class="section-body">
-                    <a href="https://docs.google.com/document/d/1_aQCjujcLprWIJLyJdhcOSJdh945GoIEyw8YfOpZLd8/edit?usp=sharing" target="_blank" class="content-slip">
-                        <div class="contact-icon">
-                            <img src="./images/file-solid.svg" class="filter-navy" alt="Resume Icon" height="32">
-                        </div>
-                        <p>Jack Amoss Resume</p>
-                    </a>
-                </div> -->
             </div>
         </div>
     </div>
@@ -233,4 +216,5 @@ to Yahoo's products. It's an immensely rewarding experience, and I'm thankful fo
     <br>
     <p>Copyright © Jack Amoss 2023</p>
 </footer>
+<script type="module" src="main.js"></script>
 </html>
