@@ -75,11 +75,14 @@ a:link{
 
 .section-title {
     /* background-color:#343a40; */
+    box-sizing: border-box;
     background-color: rgba(13,17,23, 0.7);
     backdrop-filter: blur(6px);
     padding: 1em;
-    width:100%;
-    height:38px;
+    /* padding-right:0; */
+    width:100vw;
+    max-width: 100%;
+    height:70px;
     border-bottom: 1px solid #30363d;
 }
 
@@ -95,7 +98,6 @@ a:link{
     padding-top:2em;
     padding-bottom:2em;
     color:#8b949e;
-    border-radius: 0px 0px 7px 7px;
 }
 
 .section-body h3,p {
@@ -106,6 +108,8 @@ a:link{
     /* box-shadow: 0px 0px 5px rgb(121, 121, 121); */
     margin-bottom: 2em;
     /* background-color: #ffffff; */
+    margin-left:4px;
+    margin-right:4px;
 }
 
 .body-card-contents {
@@ -230,7 +234,8 @@ a:link{
     flex-direction: column;
     /* font-family: 'Bebas Neue', cursive; */
     font-family: 'Roboto', sans-serif;
-    font-style: normal;
+    font-style:normal;
+    font-weight: 400;
     /* background-color: #e5e5e5; */
 }
 
@@ -353,7 +358,7 @@ a:link{
 }
 
 #main-img-space {
-    padding-top: 500px;
+    padding-top:100vh
 }
 
 #main-img {
@@ -411,7 +416,6 @@ a:link{
     flex-direction: column;
     align-items: center;
     margin-bottom: 4em;
-    background-color: red;
 }
 
 svg {
@@ -429,23 +433,26 @@ svg {
     display:none;
 }
 
+#resume-download {
+    color:#219472;
+    text-align: center;
+}
+
 #resume-link {
     max-width:600px;
     margin:auto;
-    margin-top: 24px;
-    margin-bottom:128px;
 }
 
 #resume-img {
     width:100%;
+    border-radius: 7px;
     /* opacity: 0.5; */
     /* box-shadow: 0 0 5px 0 rgb(117, 107, 107); */
 }
 
-#resume-go-icon {
+/* #resume-go-icon {
     width:72px;
     position:absolute;
-    /* top: 50%; */
     left: 50%;
     margin-top:200px;
     transform: translate(-50%, -50%);
@@ -458,7 +465,7 @@ svg {
 #resume-go-icon:hover {
     filter: drop-shadow(0 0 4px #219472);
     transition: 0.3s;
-}
+} */
 
 /* transition to alternate education card layout */
 /* @media (min-width: 560px) {
@@ -479,7 +486,11 @@ svg {
     svg {
         display:block;
     }
-    
+
+    .section-title {
+        width:100%;
+    }
+
     #gtlogo {
         display:block;
     }
@@ -488,9 +499,8 @@ svg {
 @media (min-width: 810px) {
     .section {
         margin:12px;
-        border-radius: 7px;
         border: 1px solid #30363d;
-
+        border-radius: 7px;
     }
 
     .section-title {
@@ -505,6 +515,9 @@ svg {
         height: 70px;
     }
     
+    .section-body {
+        border-radius: 0px 0px 7px 7px;
+    }
 
     #mobile-nav-resume {
         display: block;
@@ -519,6 +532,7 @@ svg {
     /* #main-img {
 
     } */
+    
 
     #contact-section {
         flex-direction: row;
@@ -529,8 +543,7 @@ svg {
         flex-direction: row;
         padding:32px;
         justify-content: space-around;
-    }
-    
+    }    
 }
 
 /* transition to side nav always visible */
@@ -576,10 +589,6 @@ svg {
         display:block;
     }
 
-    #main-img-space {
-        padding-top:650px;
-    }
-
 }
 
 @media (min-width: 1400px) {
@@ -604,7 +613,7 @@ svg {
         margin:auto;
         /* box-shadow: 0 5px 5px 0 rgb(117, 107, 107); */
     }
-    
+
     /* #body-container {
         margin:auto;
     } */
